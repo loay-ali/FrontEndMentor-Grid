@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+	
+	font-family: "main";
+}
+
+@font-face {
+	font-family: "main";
+	src: url('../fonts/DMSans-VariableFont_opsz,wght.ttf');
+}
+
+body {
+	grid-template-areas: "A B B C" "D E F C" "D G H H";
+	max-width:1250px;
+	
+	margin:25px calc(25% - 156.25px);
+	
+	transition-duration:1.0s;
+}
+
+#b-7 { grid-area: A}
+#b-1 { grid-area: B}
+#b-4 { grid-area: C}
+#b-8 { grid-area: D}
+#b-2 { grid-area: E}
+#b-3 { grid-area: F}
+#b-6 { grid-area: G}
+#b-5 { grid-area: H}
+
+@media(max-width:1250px) {
+	body {
+		grid-template-areas: "A" "B" "C" "D" "E" "F" "G" "H" !important;
+		width:100%;
+		margin:0;
+		padding:5px;
+	}
+	
+	body > * { width:100%;}
+}
